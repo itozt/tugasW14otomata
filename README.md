@@ -7,30 +7,30 @@
 
 ---
 
-## The Busy Beaver Problem
+## 🦫 The Busy Beaver Problem
 The Busy Beaver Problem berfokus pada pencarian Mesin Turing paling "sibuk" atau "produktif" untuk sejumlah keadaan (state) tertentu. Secara spesifik, masalah ini mencari Mesin Turing dengan $n$ state yang:
 1.  **Berhenti (halt)** setelah sejumlah langkah.
 2.  Mencetak **jumlah simbol '1' terbanyak** pada pita (tape) awal yang kosong, sebelum berhenti.
 
 Mesin Turing yang memenuhi kriteria ini disebut **Busy Beaver** untuk $n$ state tersebut.
 
-## Premis Dasar dan Konsep
+## ✨ Premis Dasar dan Konsep
 Untuk memahami The Busy Beaver Problem, kita perlu memahami dasar Mesin Turing:
 * **Pita (Tape):** Pita tak terbatas yang terbagi menjadi sel, berisi simbol '0' (kosong) atau '1'.
 * **Kepala Baca/Tulis (Read/Write Head):** Membaca/menulis simbol dan bergerak ke kiri/kanan.
 * **Keadaan (State):** Kondisi internal Mesin Turing (contoh: A, B, C, ...). Ada juga **keadaan berhenti (Halt State)**.
 * **Fungsi Transisi:** Aturan `(state_saat_ini, simbol_dibaca) -> (simbol_ditulis, arah_gerak, state_berikutnya)`.
 
-## Tujuan The Busy Beaver Problem adalah menemukan dua nilai untuk setiap $n$:
+## 🎯 Tujuan The Busy Beaver Problem adalah menemukan dua nilai untuk setiap $n$:
 1.  $\Sigma(n)$: Jumlah maksimum simbol '1' yang dicetak.
 2.  $S(n)$: Jumlah maksimum langkah yang diambil.
 
 $\Sigma(n)$ dikenal sebagai **fungsi Busy Beaver**. Ini seperti kompetisi di mana mesin yang berhenti dengan '1' terbanyak adalah pemenangnya.
 
-## Ilustrasi
+## 🤖 Ilustrasi
 Bayangkan Anda memiliki sejumlah robot kecil (n robot, mewakili n state) di atas sebuah jalur panjang (pita). Setiap robot dapat membaca apa yang ada di depannya, menulis sesuatu, dan kemudian memutuskan untuk bergerak ke kiri atau kanan, dan mengubah kondisi internalnya. The Busy Beaver Problem meminta Anda untuk merancang aturan untuk robot-robot ini sehingga, dimulai dari jalur kosong, mereka akhirnya berhenti, dan ketika mereka berhenti, ada sebanyak mungkin tanda '1' di jalur tersebut.
 
-## Contoh dan Implementasi Pemenang (hingga 3 State)
+## 🌳 Contoh dan Implementasi Pemenang (hingga 3 State)
 
 Menemukan Busy Beaver sangat sulit karena jumlah kemungkinan Mesin Turing meningkat secara eksponensial. Ini juga terkait dengan **halting problem** (masalah berhenti) yang tidak dapat diputuskan.
 
@@ -42,7 +42,7 @@ Menemukan Busy Beaver sangat sulit karena jumlah kemungkinan Mesin Turing mening
 * `H`: State Berhenti/Halt
 * Tabel transisi akan ditampilkan dalam format: (state_saat_ini, simbol_dibaca) → (simbol_ditulis, arah_gerak, state_berikutnya).
 
-## Busy Beaver untuk $n=1$ State
+## 1️⃣ Busy Beaver untuk $n=1$ State
 Mesin Turing 1-state hanya punya satu state kerja (A) dan satu state berhenti (H).
 
 **Tabel Transisi:**
@@ -64,7 +64,7 @@ Mesin Turing 1-state hanya punya satu state kerja (A) dan satu state berhenti (H
 * $\Sigma(1) = 1$  (satu simbol '1' dicetak)
 * $S(1) = 1$ (satu langkah komputasi)
 
-## Busy Beaver untuk $n=2$ States
+## 2️⃣ Busy Beaver untuk $n=2$ States
 Mesin Turing 2-state memiliki dua state kerja (A, B) dan satu state berhenti (H).
 
 **Tabel Transisi (Pemenang):**
@@ -97,7 +97,7 @@ Mulai: Pita ...000**[0]**000..., Keadaan A
 
 *(Catatan: Simulasi detail untuk 2-state ini cukup panjang).*
 
-## Busy Beaver untuk $n=3$ States
+## 3️⃣ Busy Beaver untuk $n=3$ States
 Mesin Turing 3-state memiliki tiga state kerja (A, B, C) dan satu state berhenti (H).
 
 **Tabel Transisi (Pemenang):**
